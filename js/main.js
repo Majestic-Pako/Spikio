@@ -18,16 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let imagenes = [
     {
-        "url": "https://picsum.photos/id/1/1200/800",
-        "nombre": "Proyecto 01"
+        "url": "img/portHWS.png",
+        "nombre": "Hollow Knigth Silksong"
     },
     {
-        "url": "https://picsum.photos/id/20/1200/800",
-        "nombre": "Proyecto 02"
+        "url": "img/portCK.png",
+        "nombre": "Core Keeper"
     },
     {
-        "url": "https://picsum.photos/id/30/1200/800",
-        "nombre": "Proyecto 03"
+        "url": "img/portPeak.png",
+        "nombre": "Expedition 33"
     }
 ];
 
@@ -73,24 +73,4 @@ let intervalo;
         });
     }
 
-    function avanzarAutomaticamente() {
-        actual++;
-        if (actual >= imagenes.length) {
-            actual = 0;
-        }
-        cambiarImagen(actual);
-    }
-
-    function iniciarCarrusel() {
-        intervalo = setInterval(avanzarAutomaticamente, 6000);
-    }
-
 inicializarPuntos();
-iniciarCarrusel();
-
-document.querySelector('.carrusel').addEventListener('mouseenter', () => {
-    clearInterval(intervalo);
-});
-document.querySelector('.carrusel').addEventListener('mouseleave', () => {
-    iniciarCarrusel();
-});

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="../img/test.png" alt="logo">
+                </div>
+                <ul id="menuList">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="info.html">Informacion</a></li>
+                </ul>
+                <div>
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-bars-staggered" id="hamburgerIcon"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="titulo">
+            <h1>Peak</h1>
+            <p><strong>Reseña del juego Peak</strong></p>
+        </div>
+        <div class="info">
+            <div class="foto">
+                <img src="../img/peak.png" alt="peak">
+            </div>
+            <div class="info-text">
+                <h2>Información</h2>
+                <div class="info-box">
+                    <div class="casilla sinopsis">
+                        <h3>Sinopsis</h3>
+                        <p>PEAK es un juego cooperativo de escalada en el que un solo error puede ser fatal.
+                        Ya sea en solitario o en grupo, la única esperanza de salir de la misteriosa isla es subiendo hasta la cima de la montaña del centro. 
+                        ¿Tenéis lo que hace falta para subir al <strong>PEAK?</strong>
+                        </p>
+                    </div>
+                    <div class="casilla">
+                        <strong>Desarrollador:</strong> Team Peak
+                    </div>
+                    <div class="casilla">
+                        <strong>Editor:</strong> Aggro Crab, Landfall
+                    </div>
+                    <div class="casilla">
+                        <strong>Fecha de Lanzamiento:</strong> 16 JUNIO 2025
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sitios">
+            <h3>Disponible En:</h3>
+            <a href="https://store.steampowered.com/app/3527290/PEAK/" target="_blank" class="card-sitio">
+                <i class="fa-brands fa-steam"></i>
+                <p>Steam</p>
+            </a>
+        </div>
+        <div class="form-reseña">
+            <h3>Deja tu Reseña</h2>
+            <p>Mantenemos el anonimato con las reseñas de los juegos</p>
+            <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                <input type="hidden" name="puntuacion">
+            </div>
+            <p id="rating-message" class="rating-message"></p>
+            <form action="">
+                <label for="reseña">Reseña:</label>
+                <textarea id="reseña" name="reseña" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/1ef2779bde.js" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/stars.js"></script>
+    <footer>
+
+    </footer>
+</body>
+</html>

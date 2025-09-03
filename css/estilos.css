@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color:#1e1e1e;
+}
 main{
-    background-color: blanchedalmond;
+    background-color:#1e1e1e;
+    color: #f0f0f0;
 }
 /* #### Colores de prueba cambiarlos despues #### */
 nav {
@@ -84,7 +88,6 @@ nav ul li a:hover {
         transform: translateY(0);
     }
 }
-
 .container {
     max-width: 1200px;
     width: 100%;
@@ -93,11 +96,13 @@ nav ul li a:hover {
     margin: auto;
 }        
 h2 {
+    /*##############################*/
     color: white;
+    /*##############################*/
     margin-bottom: 30px;
     font-size: 2.5rem;
 }
-.carrusel {
+.carrusel{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +112,7 @@ h2 {
     position: relative;
     margin-bottom: 20px;
 }
-.imagenes {
+.imagenes{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,14 +127,15 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 15px;
 }
 .img {
     height: 100%;
     max-height: 576px;
     width: 100%;
     max-width: 1134px;
-    border-radius: 15px;
     object-fit: cover;
+    border-radius: 10px;
     transition: opacity 0.8s ease;
 }
 .puntos {
@@ -143,17 +149,23 @@ h2 {
     height: 16px;
     width: 16px;
     margin: 0 8px;
+    /*###################*/
     background-color: rgba(255, 255, 255, 0.5);
+    /*###################*/
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .punto:hover {
+    /*###################*/
     background-color: rgba(255, 255, 255, 0.8);
+    /*###################*/
     transform: scale(1.2);
 }
 .punto.activo {
+    /*###################*/
     background-color: #5E17EB;
+    /*###################*/
     transform: scale(1.3);
 }
 @media (max-width: 768px) {
@@ -163,4 +175,194 @@ h2 {
     h2 {
         font-size: 2rem;
     }
+}
+.info {
+    margin: 30px auto;
+    display: flex;
+    width: 80%;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+}
+.info img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+}
+.info-text {
+    flex: 1;
+    min-width: 280px;
+}
+.info-box {
+    /*##############################*/
+    background-color: #2a2a2a;
+    /*##############################*/
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.casilla {
+    padding: 10px;
+    /*##############################*/
+    border-bottom: 1px solid #444;
+    /*##############################*/
+}
+.casilla:last-child {
+    border-bottom: none;
+}
+.casilla h3 {
+    margin: 0 0 10px 0;
+}
+.sitios {
+    text-align: center;
+    margin-top: 40px;
+}
+.card-sitio {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /*##############################*/
+    color: #fff;
+    background-color: #2a2a2a;
+    /*##############################*/
+    padding: 20px;
+    border-radius: 12px;
+    /*##############################*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    /*##############################*/
+    width: 120px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+.card-sitio i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.card-sitio:hover {
+    transform: translateY(-5px);
+    /*##############################*/
+    background-color: #3a3a3a;
+    /*##############################*/
+}
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info img {
+        max-width: 90%;
+    }
+    .info-text {
+        width: 100%;
+    }
+}
+.form-reseña {
+    width: 80%;
+    margin: 40px auto;
+    /*##############################*/
+    background-color: #2a2a2a;
+    /*##############################*/
+    padding: 25px;
+    border-radius: 12px;
+    /*##############################*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    color: #f0f0f0;
+    /*##############################*/
+    text-align: center;
+}
+.form-reseña h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    /*##############################*/
+    color: #ffffff;
+    /*##############################*/
+}
+.form-reseña p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    /*##############################*/
+    color: #bbbbbb;
+    /*##############################*/
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+    margin-bottom: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+.rating .star {
+    /*##############################*/
+    color: #555; 
+    /*##############################*/
+    transition: color 0.3s;
+}
+.rating .star.active {
+    /*##############################*/
+    color: #ffcc00; 
+    /*##############################*/
+}
+.rating-message {
+    text-align: center;
+    font-size: 14px;
+    /*##############################*/
+    color: #bbb;
+    /*##############################*/
+    margin-bottom: 20px;
+    min-height: 18px; 
+}
+.form-reseña form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+.form-reseña label {
+    font-weight: bold;
+    font-size: 14px;
+}
+.form-reseña textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    /*##############################*/
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    /*##############################*/
+    resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.form-reseña textarea:focus {
+    /*##############################*/
+    outline: 2px solid #ffcc00;
+    /*##############################*/
+}
+.form-reseña button {
+    /*##############################*/
+    background-color: #ffcc00;
+    color: #000;
+    /*##############################*/
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+.form-reseña button:hover {
+    /*##############################*/
+    background-color: #e6b800;
+    /*##############################*/
+    transform: translateY(-2px);
 }
