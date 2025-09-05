@@ -70,14 +70,18 @@
                     <span class="star" data-value="3">&#9733;</span>
                     <span class="star" data-value="4">&#9733;</span>
                     <span class="star" data-value="5">&#9733;</span>
-                <input type="hidden" name="puntuacion">
+                <input type="hidden" name="puntuacion" id="puntuacion">
             </div>
             <p id="rating-message" class="rating-message"></p>
-            <form action="">
+            <form action=""  id="reseñaForm">
                 <label for="reseña">Reseña:</label>
                 <textarea id="reseña" name="reseña" rows="4" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
+        </div>
+        <div class="caja-reseñas">
+            <h3>Reseñas de Usuarios</h3>
+            <div class="reseñas-lista"></div>
         </div>
     </main>
     <script src="https://kit.fontawesome.com/1ef2779bde.js" crossorigin="anonymous"></script>
