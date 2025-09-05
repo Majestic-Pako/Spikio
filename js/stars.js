@@ -62,10 +62,85 @@ reseñaForm.addEventListener("submit", function(e) {
         <p><strong>${usuario}</strong></p>
         <p><strong>Puntaje:</strong> ${estrellasHTML}</p>
         <p><strong>Comenta:</strong></p>
-        <p>${texto}</p>
+        <p class="texto-reseña">${texto}</p>
+        <div class="acciones">
+            <button class="editar">Editar</button>
+            <button class="eliminar">Eliminar</button>
+        </div>
     `;
     reseñasLista.prepend(reseñaUsuario); 
     alert("Tu reseña fue enviada con éxito. ¡Gracias por compartir tu opinión!");
+    reseñaUsuario.querySelector(".eliminar").addEventListener("click", () => {
+        alert("La reseña ha sido eliminada.");
+        reseñaUsuario.remove();
+    });
+
+    reseñaUsuario.querySelector(".editar").addEventListener("click", () => {
+        const textoParrafo = reseñaUsuario.querySelector(".texto-reseña");
+        const textoActual = textoParrafo.textContent;
+        const textarea = document.createElement("textarea");
+        textarea.value = textoActual;
+        textarea.rows = 3;
+        textarea.classList.add("texto-reseña-editar");
+
+        const estrellasParrafo = reseñaUsuario.querySelector("p:nth-of-type(2)"); 
+        const puntajeActual = estrellasParrafo.querySelectorAll(".estrella.llena").length;
+        const estrellasEditar = document.createElement("div");
+        estrellasEditar.classList.add("rating-editar");
+        for (let i = 1; i <= 5; i++) {
+            const star = document.createElement("span");
+            star.classList.add("estrella");
+            star.innerHTML = "&#9733;";
+            if (i <= puntajeActual) star.classList.add("llena");
+            star.dataset.value = i;
+            estrellasEditar.appendChild(star);
+            star.addEventListener("mouseover", () => {
+                updateStarsEdit(estrellasEditar, i);
+            });
+            star.addEventListener("mouseout", () => {
+                updateStarsEdit(estrellasEditar, ratingEditar);
+            });
+            star.addEventListener("click", () => {
+                ratingEditar = i;
+            });
+        }
+        let ratingEditar = puntajeActual;
+        function updateStarsEdit(container, value) {
+            const stars = container.querySelectorAll("span.estrella");
+            stars.forEach(star => {
+            if (parseInt(star.dataset.value) <= value) {
+                star.classList.add("llena");
+            } else {
+                star.classList.remove("llena");
+            }
+            });
+        }
+        const guardarBtn = document.createElement("button");
+        guardarBtn.textContent = "Guardar";
+        textoParrafo.replaceWith(textarea);
+        estrellasParrafo.replaceWith(estrellasEditar);
+        reseñaUsuario.querySelector(".acciones").appendChild(guardarBtn);
+        guardarBtn.addEventListener("click", () => {
+            const nuevoTexto = textarea.value.trim();
+            if (nuevoTexto !== "") {
+                const nuevoP = document.createElement("p");
+                nuevoP.classList.add("texto-reseña");
+                nuevoP.textContent = nuevoTexto;
+                textarea.replaceWith(nuevoP);
+
+                let nuevasEstrellasHTML = "";
+                for (let i = 1; i <= 5; i++) {
+                    nuevasEstrellasHTML += i <= ratingEditar 
+                    ? '<span class="estrella llena">&#9733;</span>'
+                    : '<span class="estrella vacia">&#9734;</span>';
+                }
+                const nuevoPuntaje = document.createElement("p");
+                nuevoPuntaje.innerHTML = `<strong>Puntaje:</strong> ${nuevasEstrellasHTML}`;
+                estrellasEditar.replaceWith(nuevoPuntaje);
+                guardarBtn.remove();
+            }
+        });
+    });
     reseñaForm.reset();
     puntuacionInput.value = 0;
     ratingValue = 0;
