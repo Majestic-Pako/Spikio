@@ -3,13 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+}
 body{
     background-color:#232B2E;
+    display: flex;
+    flex-direction: column;
 }
-
 main{
     background-color:#232B2E;
     color: #BEDAE8;
+    flex: 1 0 auto;
 }
 /* #### Colores de prueba cambiarlos despues #### */
 nav {
@@ -39,7 +44,7 @@ nav ul li a:hover {
     background-color: solid rgba(79,97,107,0.5);
 }
 .logo img {
-    height: 50px;
+    height: 80px;
 }
 .menu-icon {
     display: none;
@@ -87,6 +92,10 @@ nav ul li a:hover {
     nav ul.active li a{
         color:#9AB8C6;
     }
+    nav ul li a:hover {
+        color: #487A99;
+        background-color: solid rgba(79,97,107,0.5);
+    }
 }
 .container {
     max-width: 1200px;
@@ -113,6 +122,10 @@ h3{
 p strong{
     color:#A0DBF8;
     font-size: 1.3rem;
+}
+.titulo{
+    margin: auto;
+    text-align: center;
 }
 .carrusel{
     display: flex;
@@ -187,6 +200,56 @@ p strong{
     h2 {
         font-size: 2rem;
     }
+}
+.biblioteca {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.juego-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    background-color: #1e1e1e;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.juego-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.juego-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.juego-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.juego-nombre {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.juego-plataformas {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 1.2rem;
 }
 .info {
     margin: 30px auto;
@@ -495,4 +558,37 @@ p strong{
 }
 .estrella.llena{
     cursor: pointer;
+}
+footer {
+    padding: 15px;
+    /*##############################*/
+    background-color: #36464F;
+    color: #9AB8C6;
+    /*##############################*/
+    margin-top: 40px;
+    font-size: 14px;
+}
+.footer-content {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 20px; 
+}
+.footer-image img {
+    max-height: 100px;
+    max-width: 100px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+.footer-linea {
+    width: 2px;
+    height: 70%; 
+    /*##############################*/
+    background-color: #999;
+    /*##############################*/
+    min-height: 50px; 
+}
+.footer-text {
+    margin: 0;
 }
