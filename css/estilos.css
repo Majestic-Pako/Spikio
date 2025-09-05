@@ -4,11 +4,15 @@
     box-sizing: border-box;
 }
 body{
+    /* ############################################## */
     background-color:#1e1e1e;
+    /* ############################################## */
 }
 main{
+    /* ############################################## */
     background-color:#1e1e1e;
     color: #f0f0f0;
+    /* ############################################## */
 }
 /* #### Colores de prueba cambiarlos despues #### */
 nav {
@@ -221,6 +225,9 @@ h2 {
 .sitios {
     text-align: center;
     margin-top: 40px;
+}
+.sitios h3{
+    padding-bottom: 15px;
 }
 .card-sitio {
     display: inline-flex;
