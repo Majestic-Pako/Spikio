@@ -86,7 +86,6 @@ reseñaForm.addEventListener("submit", function(e) {
         textarea.value = textoActual;
         textarea.rows = 3;
         textarea.classList.add("texto-reseña-editar");
-
         const estrellasParrafo = reseñaUsuario.querySelector("p:nth-of-type(2)"); 
         const puntajeActual = estrellasParrafo.querySelectorAll(".estrella.llena").length;
         const estrellasEditar = document.createElement("div");
@@ -131,7 +130,6 @@ reseñaForm.addEventListener("submit", function(e) {
                 nuevoP.classList.add("texto-reseña");
                 nuevoP.textContent = nuevoTexto;
                 textarea.replaceWith(nuevoP);
-
                 let nuevasEstrellasHTML = "";
                 for (let i = 1; i <= 5; i++) {
                     nuevasEstrellasHTML += i <= ratingEditar 
@@ -151,10 +149,9 @@ reseñaForm.addEventListener("submit", function(e) {
     updateStars(0);
     ratingMessage.textContent = "";
 });
+
 function actualizarScore() {
     if (puntuaciones.length === 0) return;
-    
-    // Calcular distribución de calificaciones
     const distribution = {
         5: 0,
         4: 0,
@@ -162,20 +159,12 @@ function actualizarScore() {
         2: 0,
         1: 0
     };
-    
-    // Contar cada tipo de calificación
     puntuaciones.forEach(puntaje => {
         distribution[puntaje]++;
     });
-    
-    // Calcular porcentaje de aceptación (4 y 5 estrellas)
     const reseñasAceptadas = distribution[5] + distribution[4];
     const porcentajeAceptacion = Math.round((reseñasAceptadas / puntuaciones.length) * 100);
-    
-    // Actualizar score principal
     scoreSpan.textContent = porcentajeAceptacion;
-    
-    // Actualizar barras de distribución
     for (let rating = 1; rating <= 5; rating++) {
         const percentage = Math.round((distribution[rating] / puntuaciones.length) * 100);
         const bar = document.querySelector(`.bar[data-rating="${rating}"]`);
