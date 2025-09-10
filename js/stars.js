@@ -4,6 +4,8 @@ const ratingMessage = document.getElementById("rating-message");
 const reseñaForm = document.getElementById("reseñaForm");
 const reseñasLista = document.querySelector(".reseñas-lista");
 let ratingValue = 0;
+let puntuaciones = [];
+const scoreSpan = document.querySelector('.metacritic-score .score');
 
 stars.forEach(star => {
     star.addEventListener('click', () => {
@@ -48,6 +50,8 @@ reseñaForm.addEventListener("submit", function(e) {
     }
     const randomNum = Math.floor(Math.random() * 500) + 1;
     const usuario = `Anónimo #${randomNum}`;
+    puntuaciones.push(puntaje);
+    actualizarScore();
     const reseñaUsuario = document.createElement("div");
     reseñaUsuario.classList.add("reseña-usuario");
     let estrellasHTML = "";
@@ -146,4 +150,43 @@ reseñaForm.addEventListener("submit", function(e) {
     ratingValue = 0;
     updateStars(0);
     ratingMessage.textContent = "";
+});
+function actualizarScore() {
+    if (puntuaciones.length === 0) return;
+    
+    // Calcular distribución de calificaciones
+    const distribution = {
+        5: 0,
+        4: 0,
+        3: 0,
+        2: 0,
+        1: 0
+    };
+    
+    // Contar cada tipo de calificación
+    puntuaciones.forEach(puntaje => {
+        distribution[puntaje]++;
+    });
+    
+    // Calcular porcentaje de aceptación (4 y 5 estrellas)
+    const reseñasAceptadas = distribution[5] + distribution[4];
+    const porcentajeAceptacion = Math.round((reseñasAceptadas / puntuaciones.length) * 100);
+    
+    // Actualizar score principal
+    scoreSpan.textContent = porcentajeAceptacion;
+    
+    // Actualizar barras de distribución
+    for (let rating = 1; rating <= 5; rating++) {
+        const percentage = Math.round((distribution[rating] / puntuaciones.length) * 100);
+        const bar = document.querySelector(`.bar[data-rating="${rating}"]`);
+        const percentageSpan = document.querySelector(`.rating-bar:nth-child(${6 - rating}) .percentage`);
+        
+        if (bar && percentageSpan) {
+            bar.style.width = `${percentage}%`;
+            percentageSpan.textContent = `${percentage}%`;
+        }
+    }
+}
+document.addEventListener('DOMContentLoaded', function() {
+    actualizarScore();
 });
