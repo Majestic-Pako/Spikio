@@ -112,7 +112,7 @@ h2 {
     color:#DFF1FF;
     margin-top: 10px;
     margin-bottom: 30px;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
 }
 h3{
     margin-top: 10px;
@@ -123,9 +123,39 @@ p strong{
     color:#A0DBF8;
     font-size: 1.3rem;
 }
-.titulo{
-    margin: auto;
+.titulo {
     text-align: center;
+    margin:  auto;
+    padding: 1rem 0;
+    position: relative;
+}
+.titulo-deco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; 
+}
+.titulo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+}
+.titulo-deco .linea {
+    flex: 1;
+    height: 2px;
+    /*###################*/
+    background: linear-gradient(to right, transparent, #6e5494, transparent);
+    /*###################*/
+    border-radius: 2px;
+    max-width: 120px; 
+}
+.titulo p {
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+    opacity: 0.85;
+    font-style: italic;
 }
 .carrusel{
     display: flex;
@@ -201,8 +231,6 @@ p strong{
         font-size: 2rem;
     }
 }
-
-
 .biblioteca {
     max-width: 900px;
     margin: 0 auto;
@@ -230,9 +258,10 @@ p strong{
 }
 .biblioteca p {
     text-align: center;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    opacity: 0.85; 
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+    font-style: italic; 
 }
 .juego-card {
     display: flex;
@@ -266,8 +295,8 @@ p strong{
     opacity: 0.9;
 }
 .juego-img {
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
     border-radius: 10px;
     flex-shrink: 0;
@@ -319,6 +348,9 @@ p strong{
     color: #107C10;
     /*###################*/
 }
+.fa-steam{
+    color: #dddddd;
+}
 .juego-plataformas i {
     transition: transform 0.2s ease, color 0.3s ease;
 }
@@ -328,15 +360,71 @@ p strong{
     color: #9AB8C6;
     /*###################*/
 }
-
-
+.novedades {
+    margin: 60px auto;
+    width: 80%;
+    text-align: center;
+}
+.novedades h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.novedades h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    /*###################*/
+    background-color: rgba(255,255,255,0.15); 
+    /*###################*/
+    margin: 0.4rem auto 0;
+    border-radius: 2px;
+}
+.novedades p {
+    margin-bottom: 30px;
+}
+.novedades-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.novedad-card {
+    /*###################*/
+    background: #1c1c1c;
+    /*###################*/
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+.novedad-card:hover {
+    transform: translateY(-5px);
+}
+.novedad-fecha {
+    font-size: 0.8rem;
+    /*###################*/
+    color: #999;
+    /*###################*/
+    display: block;
+    margin-bottom: 8px;
+}
+.novedad-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.novedad-card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
 .repositorio {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
     padding: 20px;
-    margin: 50px auto;
+    margin: auto;
     max-width: 850px;
     /*##############################*/
     border: 2px solid #6e5494; 
@@ -399,7 +487,7 @@ p strong{
 }
 .despedida {
     margin-top: 20px;
-    padding: 40px 20px;
+    padding: 20px;
     text-align: center;
     position: relative;
 }
@@ -432,11 +520,6 @@ p strong{
 .imagen-despedida img {
     width: 120px;
     opacity: 0.95;
-    transform: rotate(-5deg);
-    transition: transform 0.3s ease;
-}
-.imagen-despedida img:hover {
-    transform: rotate(0deg) scale(1.05);
 }
 .parallax {
     position: relative;
@@ -444,10 +527,18 @@ p strong{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../img/portPeak.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
+}
+.parallax-peak {
+    background-image: url('../img/portPeak.png');
+}
+.parallax-hks {
+    background-image: url('../img/portHWS.png');
+}
+.parallax-core {
+    background-image: url('../img/portCK.png');
 }
 .parallax .overlay {
     position: absolute;
@@ -517,6 +608,9 @@ p strong{
 .sitios h3{
     padding-bottom: 15px;
 }
+.sitios a{
+    margin: 0 10px;
+}
 .card-sitio {
     display: inline-flex;
     flex-direction: column;
@@ -560,41 +654,61 @@ p strong{
         background-attachment: scroll; 
     }
 }
-.metacritic {
+.reseña-card {
+    display: flex;
+    gap: 25px;
     /*##############################*/
-    background: #1c1c1c;
+    background: #1b1f22;  
     /*##############################*/
-    padding: 20px;
-    border-radius: 12px;
-    /*##############################*/
+    border-radius: 16px;
+    padding: 30px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-    color: #f0f0f0;
+    max-width: 900px;
+    margin: 40px auto;
+}
+.reseña-divider {
+    width: 2px;
     /*##############################*/
-    font-family: Arial, sans-serif;
-    max-width: 400px;
-    margin: 20px auto;
+    background: linear-gradient(to bottom, #333, #555, #333);
+    /*##############################*/
+    border-radius: 2px;
+}
+@media (max-width: 768px) {
+    .reseña-card {
+        flex-direction: column;
+    }
+    .reseña-divider {
+        width: 100%;
+        height: 2px;
+        margin: 15px 0;
+        background: linear-gradient(to right, #333, #555, #333);
+    }
+}
+.reseña-card .metacritic {
+    flex: 1;
+    padding: 10px 20px;
 }
 .metacritic h3 {
+    text-align: center;
+    font-size: 18px;
     margin-bottom: 15px;
-    font-size: 20px;
     /*##############################*/
     color: #ffcc00;
     /*##############################*/
-    text-align: center;
 }
 .metacritic-score {
     text-align: center;
     margin-bottom: 20px;
 }
 .metacritic-score .score {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: bold;
     /*##############################*/
     color: #ffcc00;
     /*##############################*/
 }
 .metacritic-score .percent {
-    font-size: 24px;
+    font-size: 18px;
     margin-left: 5px;
     /*##############################*/
     color: #bbb;
@@ -609,127 +723,115 @@ p strong{
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 14px;
+    font-size: 18px;
 }
 .stars-metacritic {
     display: flex;
-    gap: 3px;
+    gap: 2px;
     min-width: 70px;
 }
 .star-mc {
-    font-size: 16px;
+    font-size: 18px;
     /*##############################*/
-    color: #ffcc00; 
+    color: #ffcc00;
     /*##############################*/
     cursor: pointer;
 }
 .bar-container {
     flex: 1;
-    height: 12px;
+    height: 10px;
     /*##############################*/
-    background: #333;
+    background: #2f373a;
     /*##############################*/
-    border-radius: 6px;
+    border-radius: 5px;
     overflow: hidden;
-    position: relative;
 }
 .bar {
     height: 100%;
     /*##############################*/
     background: linear-gradient(90deg, #ffcc00, #ffaa00);
     /*##############################*/
-    width: 0%; 
+    width: 0%;
     transition: width 0.5s ease-in-out;
 }
 .percentage {
     min-width: 40px;
     text-align: right;
+    /*##############################*/
     color: #aaa;
+    /*##############################*/
 }
-.form-reseña {
-    width: 80%;
-    margin: 40px auto;
-    /*##############################*/
-    background-color: #2a2a2a;
-    /*##############################*/
-    padding: 25px;
-    border-radius: 12px;
-    /*##############################*/
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-    color: #f0f0f0;
-    /*##############################*/
-    text-align: center;
+.reseña-card .form-reseña {
+    flex: 1.2;
+    padding: 10px 20px;
 }
 .form-reseña h3 {
+    font-size: 18px;
     margin-bottom: 10px;
-    font-size: 24px;
-    /*##############################*/
-    color: #ffffff;
-    /*##############################*/
 }
 .form-reseña p {
-    margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 15px;
     /*##############################*/
-    color: #bbbbbb;
+    color: #bbb;
     /*##############################*/
 }
 .rating {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    flex-direction: row;
-    margin-bottom: 20px;
-    font-size: 28px;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 24px;
     cursor: pointer;
 }
 .rating .star {
     /*##############################*/
-    color: #555; 
+    color: #555;
     /*##############################*/
     transition: color 0.3s;
 }
 .rating .star.active {
     /*##############################*/
-    color: #ffcc00; 
+    color: #ffcc00;
     /*##############################*/
 }
 .rating-message {
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    min-height: 16px;
     /*##############################*/
-    color: #bbb;
+    color: #aaa;
     /*##############################*/
-    margin-bottom: 20px;
-    min-height: 18px; 
 }
 .form-reseña form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     text-align: left;
 }
 .form-reseña label {
+    font-size: 13px;
     font-weight: bold;
-    font-size: 14px;
 }
 .form-reseña textarea {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
-    border: none;
     /*##############################*/
+    border: 1px solid #333b3f;
     background-color: #1e1e1e;
     color: #f0f0f0;
     /*##############################*/
     resize: vertical;
-    font-family: inherit;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
 }
 .form-reseña textarea:focus {
+    outline: none;
     /*##############################*/
-    outline: 2px solid #ffcc00;
+    border-color: #ffcc00;
+    box-shadow: 0 0 4px #ffcc00;
     /*##############################*/
 }
 .form-reseña button {
@@ -738,7 +840,7 @@ p strong{
     color: #000;
     /*##############################*/
     font-weight: bold;
-    padding: 12px;
+    padding: 10px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
