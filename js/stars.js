@@ -52,8 +52,10 @@ reseñaForm.addEventListener("submit", function(e) {
     const usuario = `Anónimo #${randomNum}`;
     puntuaciones.push(puntaje);
     actualizarScore();
+    const indexPuntaje = puntuaciones.length - 1;
     const reseñaUsuario = document.createElement("div");
     reseñaUsuario.classList.add("reseña-usuario");
+    reseñaUsuario.dataset.puntajeIndex = indexPuntaje;
     let estrellasHTML = "";
     for (let i = 1; i <= 5; i++) {
     if (i <= puntaje) {
@@ -78,7 +80,6 @@ reseñaForm.addEventListener("submit", function(e) {
         alert("La reseña ha sido eliminada.");
         reseñaUsuario.remove();
     });
-
     reseñaUsuario.querySelector(".editar").addEventListener("click", () => {
         const textoParrafo = reseñaUsuario.querySelector(".texto-reseña");
         const textoActual = textoParrafo.textContent;
@@ -139,6 +140,9 @@ reseñaForm.addEventListener("submit", function(e) {
                 const nuevoPuntaje = document.createElement("p");
                 nuevoPuntaje.innerHTML = `<strong>Puntaje:</strong> ${nuevasEstrellasHTML}`;
                 estrellasEditar.replaceWith(nuevoPuntaje);
+                const idx = parseInt(reseñaUsuario.dataset.puntajeIndex); 
+                puntuaciones[idx] = ratingEditar;
+                actualizarScore();
                 guardarBtn.remove();
             }
         });
