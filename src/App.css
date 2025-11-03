@@ -11,10 +11,33 @@ body{
     display: flex;
     flex-direction: column;
 }
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
 main{
     background-color:#232B2E;
     color: #BEDAE8;
     flex: 1 0 auto;
+}
+h1{
+    margin-top: 10px;
+    color:#DFF1FF;
+}
+h2 {
+    color:#DFF1FF;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 2.0rem;
+}
+h3{
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color:#D2ECFF;
+}
+p strong{
+    color:#A0DBF8;
+    font-size: 1.3rem;
 }
 /* #### Colores de prueba cambiarlos despues #### */
 nav {
@@ -25,6 +48,7 @@ nav {
     background-color: #36464F;
     position: relative;
     height: 70px;
+    width: 100%; 
 }
 nav ul {
     display: flex;
@@ -97,6 +121,8 @@ nav ul li a:hover {
         background-color: solid rgba(79,97,107,0.5);
     }
 }
+/*  Fin Nav */
+/*  Home   */
 .container {
     max-width: 1200px;
     width: 100%;
@@ -104,25 +130,6 @@ nav ul li a:hover {
     justify-content: center;
     margin: auto;
 }       
-h1{
-    margin-top: 10px;
-    color:#DFF1FF;
-}
-h2 {
-    color:#DFF1FF;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-size: 2.0rem;
-}
-h3{
-    margin-top: 10px;
-    font-size: 1.3rem;
-    color:#D2ECFF;
-}
-p strong{
-    color:#A0DBF8;
-    font-size: 1.3rem;
-}
 .titulo {
     text-align: center;
     margin:  auto;
@@ -157,6 +164,7 @@ p strong{
     opacity: 0.85;
     font-style: italic;
 }
+/* Inicio Carrusel Home*/
 .carrusel{
     display: flex;
     align-items: center;
@@ -171,11 +179,12 @@ p strong{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     width: 100%;
     height: 100%;
 }
 .img-container {
+    background: transparent;
     position: relative;
     width: 100%;
     height: 100%;
@@ -225,6 +234,7 @@ p strong{
         font-size: 2rem;
     }
 }
+/* Fin Carrusel Home */
 .biblioteca {
     max-width: 900px;
     margin: 0 auto;
@@ -485,6 +495,7 @@ p strong{
     width: 120px;
     opacity: 0.95;
 }
+/* Fin Home */
 .parallax {
     position: relative;
     min-height: 100vh; 
