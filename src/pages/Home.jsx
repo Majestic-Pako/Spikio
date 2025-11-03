@@ -114,17 +114,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="repositorio">
-                <div className="repo-icon">
-                    <i className="fa-brands fa-github"></i>
-                </div>
-                <div className="repo-linea"></div>
-                <div>
-                    <h3>¿Quieres contribuir?</h3>
-                    <p>Visita nuestro repositorio en GitHub y forma parte de nuestra comunidad.</p>
-                    <a href="https://github.com/Majestic-Pako/Spikio.git"><button className="btn-repo">Ir</button></a>
-                </div>
-            </div>
             <div className="despedida">
                 <div className="despedida-linea"></div>
                 <div className="despedida-contenido">

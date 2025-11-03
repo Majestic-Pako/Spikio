@@ -13,6 +13,7 @@ export default function Navbar() {
             </div>
             <ul id="menuList" className={menuOpen ? "active" : ""}>
                 <li><Link to={"/"}>Inicio</Link></li>
+                <li><Link to={"/about"}>Acerca de </Link></li>
             </ul>
             <div>
                 <div className="menu-icon" onClick={toggleMenu}>

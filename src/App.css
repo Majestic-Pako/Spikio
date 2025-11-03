@@ -406,6 +406,97 @@ nav ul li a:hover {
     font-size: 0.95rem;
     line-height: 1.4;
 }
+/* Contenedor principal */
+.aboutContainer {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Títulos principales */
+.mainTitle {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Estilos para cada miembro del equipo */
+.teamMember {
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.memberName {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.memberGithub {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+/* Contenedor principal de About */
+.about-container {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Títulos principales */
+  .about-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .about-section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Estilos para cada miembro del equipo */
+  .about-team-member {
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  
+  .about-member-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color:#A0DBF8;
+  }
+  
+  .about-member-github {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos individuales para los links de GitHub */
+  .about-github-link {
+    color: #6e5494;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .about-github-link:hover {
+    color: #a181ce;
+    text-decoration: underline;
+    background-color: #6e5494;
+  }
+  
+  /* Contenedor del repositorio con margen superior */
+  .about-repo-container {
+    margin-top: 60px;
+    padding: 20px;
+  }
 .repositorio {
     display: flex;
     align-items: center;
