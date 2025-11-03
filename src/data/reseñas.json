@@ -1,0 +1,43 @@
+{
+    "silksong": [
+    {
+        "id": 1,
+        "usuario": "Anónimo #42",
+        "puntaje": 5,
+        "texto": "Una obra maestra. La jugabilidad es increíble y los gráficos son preciosos. Team Cherry superó todas las expectativas.",
+        "indexPuntaje": 0
+    },
+    {
+        "id": 2,
+        "usuario": "Anónimo #127",
+        "puntaje": 4,
+        "texto": "Muy buen juego, aunque un poco difícil al principio. La música es espectacular.",
+        "indexPuntaje": 1
+    },
+    {
+        "id": 3,
+        "usuario": "Anónimo #89",
+        "puntaje": 5,
+        "texto": "Valió la pena la espera. Los combates son adictivos y el mundo es fascinante.",
+        "indexPuntaje": 2
+    }
+    ],
+    "corekeeper": [
+    {
+        "id": 1,
+        "usuario": "Anónimo #234",
+        "puntaje": 4,
+        "texto": "Genial para jugar con amigos. El sistema de crafteo es muy completo.",
+        "indexPuntaje": 0
+    }
+    ],
+    "peak": [
+    {
+        "id": 1,
+        "usuario": "Anónimo #156",
+        "puntaje": 5,
+        "texto": "Impresionante atmósfera y diseño de niveles. Muy recomendado.",
+        "indexPuntaje": 0
+    }
+    ]
+}
