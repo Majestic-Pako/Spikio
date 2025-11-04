@@ -406,151 +406,300 @@ nav ul li a:hover {
     font-size: 0.95rem;
     line-height: 1.4;
 }
-/* Contenedor principal */
-.aboutContainer {
-  text-align: center;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Títulos principales */
-.mainTitle {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-.sectionTitle {
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-/* Estilos para cada miembro del equipo */
-.teamMember {
-  margin-bottom: 30px;
-  padding: 0 20px;
-}
-
-.memberName {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.memberGithub {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-/* Contenedor principal de About */
-.about-container {
-    text-align: center;
-    padding: 40px 20px;
+.about-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  /* Títulos principales */
-  .about-main-title {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
-  
-  .about-section-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
-  /* Estilos para cada miembro del equipo */
-  .about-team-member {
-    margin-bottom: 30px;
-    padding: 0 20px;
-  }
-  
-  .about-member-name {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color:#A0DBF8;
-  }
-  
-  .about-member-github {
+    padding: 2rem 1rem;
+}
+.about-hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 3rem;
+}
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #DFF1FF 0%, #A0DBF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.about-subtitle {
+    font-size: 1.2rem;
+    color: #BEDAE8;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+.about-mission {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(30, 30, 30, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+.mission-icon {
+    font-size: 3.5rem;
+    color: #487A99;
+    margin-bottom: 1rem;
+}
+.about-mission h2 {
+    margin-bottom: 1rem;
+}
+.about-mission p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
     font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos individuales para los links de GitHub */
-  .about-github-link {
-    color: #6e5494;
-    text-decoration: none;
+    color: #BEDAE8;
+}
+.about-features {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.about-features h2 {
+    margin-bottom: 2.5rem;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.feature-card {
+    background-color: rgba(30, 30, 30, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 2rem;
     transition: all 0.3s ease;
-    font-weight: 600;
-    padding: 2px 6px;
-    border-radius: 4px;
-  }
-  
-  .about-github-link:hover {
-    color: #a181ce;
-    text-decoration: underline;
-    background-color: #6e5494;
-  }
-  
-  /* Contenedor del repositorio con margen superior */
-  .about-repo-container {
-    margin-top: 60px;
-    padding: 20px;
-  }
-.repositorio {
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(72, 122, 153, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.feature-card i {
+    font-size: 2.5rem;
+    color: #487A99;
+    margin-bottom: 1rem;
+}
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #D2ECFF;
+}
+.feature-card p {
+    color: #BEDAE8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+.about-team {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.about-team h2 {
+    margin-bottom: 1rem;
+}
+.team-intro {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: #BEDAE8;
+    line-height: 1.6;
+}
+.team-intro strong {
+    color: #A0DBF8;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.team-card {
+    background-color: rgba(30, 30, 30, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(110, 84, 148, 0.5);
+    box-shadow: 0 8px 20px rgba(110, 84, 148, 0.2);
+}
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #487A99 0%, #2681AF 100%);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
-    padding: 20px;
-    margin: auto;
-    max-width: 850px;
-    border: 2px solid #6e5494; 
-    border-radius: 10px;
-    position: relative;
+    overflow: hidden; 
+    border: 3px solid rgba(255, 255, 255, 0.1);
 }
-.repo-icon {
-    font-size: 55px;
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #DFF1FF;
+}
+.team-role {
+    color: #A0DBF8;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.team-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     color: #6e5494;
-    flex-shrink: 0;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
-.repo-linea{
-    width: 2px;
-    height: 70%; 
-    background-color: #6e5494;
-    min-height: 50px; 
+.team-github:hover {
+    background-color: rgba(110, 84, 148, 0.2);
+    color: #a181ce;
 }
-.repositorio::before {
+.team-github i {
+    font-size: 1.2rem;
+}
+.about-tech {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.about-tech h2 {
+    margin-bottom: 2rem;
+}
+.tech-list {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.tech-item i {
+    font-size: 3rem;
+    color: #487A99;
+    transition: all 0.3s ease;
+}
+.tech-item:hover i {
+    color: #A0DBF8;
+    transform: scale(1.1);
+}
+.tech-item span {
+    font-size: 0.95rem;
+    color: #BEDAE8;
+    font-weight: 500;
+}
+.about-cta {
+    margin-bottom: 2rem;
+}
+.cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: rgba(30, 30, 30, 0.3);
+    border: 2px solid #6e5494;
+    border-radius: 12px;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.cta-box::before {
     content: "GitHub";
     position: absolute;
     top: -12px;
     left: 20px;
-    background-color: #232B2E; 
+    background-color: #232B2E;
     padding: 0 8px;
     font-size: 0.85rem;
     font-weight: bold;
     color: #6e5494;
 }
-.repositorio h3 {
-    margin: 0;
-    font-size: 1.2rem;
+.cta-icon {
+    font-size: 4rem;
+    color: #6e5494;
+    flex-shrink: 0;
 }
-.repositorio p {
-    margin: 5px 0 12px;
-    font-size: 0.95rem;
+.cta-divider {
+    width: 2px;
+    height: 80px;
+    background-color: #6e5494;
 }
-.btn-repo {
-    padding: 8px 16px;
+.cta-content {
+    text-align: left;
+}
+.cta-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+}
+.cta-content p {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: #BEDAE8;
+}
+.cta-btn {
+    padding: 0.8rem 1.5rem;
     background: none;
     border: 2px solid #6e5494;
     border-radius: 8px;
-    font-weight: 500;
+    color: #DFF1FF;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
 }
-.btn-repo:hover {
+.cta-btn:hover {
     background-color: #6e5494;
     color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(110, 84, 148, 0.4);
+}
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .tech-list {
+        gap: 2rem;
+    }
+    .cta-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-divider {
+        width: 80px;
+        height: 2px;
+    }
+    .cta-content {
+        text-align: center;
+    }
 }
 .despedida {
     margin-top: 20px;
@@ -796,9 +945,7 @@ nav ul li a:hover {
 .percentage {
     min-width: 40px;
     text-align: right;
-    /*##############################*/
     color: #aaa;
-    /*##############################*/
 }
 .reseña-card .form-reseña {
     flex: 1.2;
@@ -832,9 +979,7 @@ nav ul li a:hover {
     font-size: 13px;
     margin-bottom: 15px;
     min-height: 16px;
-    /*##############################*/
     color: #aaa;
-    /*##############################*/
 }
 .form-reseña form {
     display: flex;
@@ -850,11 +995,9 @@ nav ul li a:hover {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
-    /*##############################*/
     border: 1px solid #333b3f;
     background-color: #1e1e1e;
     color: #f0f0f0;
-    /*##############################*/
     resize: vertical;
     font-size: 13px;
     line-height: 1.5;
@@ -890,10 +1033,8 @@ nav ul li a:hover {
 .caja-reseñas h3 {
     margin-bottom: 15px;
     font-size: 22px;
-    /*##############################*/
     color: #D2ECFF;
     border-bottom: 2px solid #333;
-    /*##############################*/
     padding-bottom: 5px;
 }
 .reseña-usuario {
@@ -964,12 +1105,232 @@ nav ul li a:hover {
 .estrella.llena{
     cursor: pointer;
 }
+.contact-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 2rem;
+}
+.contact-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.contact-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.contact-header p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+.contact-form {
+    background-color: rgba(30, 30, 30, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.contact-form-group {
+    margin-bottom: 1.5rem;
+}
+.contact-form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #D2ECFF;
+    margin-bottom: 0.5rem;
+}
+.contact-form-group label i {
+    color: #A0DBF8;
+    font-size: 1.1rem;
+}
+.contact-form-group input,
+.contact-form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #BEDAE8;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+    outline: none;
+    border-color: #487A99;
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(72, 122, 153, 0.1);
+}
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder {
+    color: rgba(190, 218, 232, 0.4);
+}
+.contact-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+.contact-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #487A99 0%, #2681AF 100%);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+.contact-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(72, 122, 153, 0.4);
+    background: linear-gradient(135deg, #5a8fad 0%, #3692c0 100%);
+}
+.contact-submit-btn:active {
+    transform: translateY(0);
+}
+.contact-submit-btn i {
+    font-size: 1rem;
+}
+.contact-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: contact-fadeIn 0.2s ease;
+}
+@keyframes contact-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.contact-modal {
+    background-color: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 2.5rem;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: contact-slideUp 0.3s ease;
+}
+@keyframes contact-slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.contact-modal-icon {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    animation: contact-checkmark 0.5s ease 0.2s both;
+}
+@keyframes contact-checkmark {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.contact-modal h3 {
+    font-size: 1.8rem;
+    color: #DFF1FF;
+    margin-bottom: 0.8rem;
+}
+.contact-modal p {
+    font-size: 1.05rem;
+    color: #BEDAE8;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+.contact-modal-btn {
+    padding: 0.8rem 2rem;
+    background-color: #487A99;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact-modal-btn:hover {
+    background-color: #5a8fad;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(72, 122, 153, 0.4);
+}
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1rem;
+        margin: 20px auto;
+    }
+    .contact-form {
+        padding: 1.5rem;
+    }
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+    .contact-modal {
+        padding: 2rem;
+    }
+}
+.contact-modal-data {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+.contact-modal-data p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+.contact-modal-data strong {
+    color: #A0DBF8;
+}
+.contact-modal-mensaje {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    font-style: italic;
+    max-height: 150px;
+    overflow-y: auto;
+}
 footer {
     padding: 15px;
-    /*##############################*/
     background-color: #36464F;
     color: #9AB8C6;
-    /*##############################*/
     margin-top: 40px;
     font-size: 14px;
 }
@@ -989,9 +1350,7 @@ footer {
 .footer-linea {
     width: 2px;
     height: 70%; 
-    /*##############################*/
     background-color: #999;
-    /*##############################*/
     min-height: 50px; 
 }
 .footer-text {
