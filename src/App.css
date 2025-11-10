@@ -95,7 +95,7 @@ nav ul li a:hover {
         z-index: 1000;
     }
     nav ul.active {
-        max-height: 200px;
+        max-height: 235px;
         background-color: #293941;
     }
     nav ul li {
