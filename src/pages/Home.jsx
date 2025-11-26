@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Silksong from "./Silksong";
-import CoreKeeper from "./Core";
+import CoreKeeper from "./CoreKeeper";
 import Peak from "./Peak";
 
 const imagenes = [
