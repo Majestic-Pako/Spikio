@@ -7,7 +7,7 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import Footer from './components/Footer' 
 import Silksong from './pages/Silksong'
-import CoreKeeper from './pages/CoreKeeper'
+import CoreKeeper from './pages/Core'
 import Peak from './pages/Peak'
 
 
