@@ -39,6 +39,9 @@ p strong{
     color:#A0DBF8;
     font-size: 1.3rem;
 }
+p{
+    color: #D2ECFF;
+}
 /* #### Colores de prueba cambiarlos despues #### */
 nav {
     padding: 10px;
